@@ -31,21 +31,21 @@ function About() {
 
 
 
-  xhr.open("GET", "https://www1.nseindia.com/nseapi/index-movers");
+  // xhr.open("GET", "https://www1.nseindia.com/nseapi/index-movers");
 
-  xhr.setRequestHeader("Authorization", "Basic aWlzbFVzZXI6aWlzbEAxMjM=");
+  // xhr.setRequestHeader("Authorization", "Basic aWlzbFVzZXI6aWlzbEAxMjM=");
 
-  // client.Headers.Add("Authorization", strUIDPWD);
-  xhr.setRequestHeader("user-agent", "PostmanRuntime / 7.23.0");
-  xhr.setRequestHeader("Accept", "*/*");
+  // // client.Headers.Add("Authorization", strUIDPWD);
+  // xhr.setRequestHeader("user-agent", "PostmanRuntime / 7.23.0");
+  // xhr.setRequestHeader("Accept", "*/*");
 
-  // WARNING: Cookies will be stripped away by the browser before sending the request.
+  // // WARNING: Cookies will be stripped away by the browser before sending the request.
 
-  xhr.setRequestHeader("Cookie", "ak_bmsc=4293479B9F0FAB27E20A2EB97A6E1D02~000000000000000000000000000000~YAAQhCdzaOCnDTmBAQAATwJITRDyC56j6j0kTfSSWwePCO7Xi+fT01/2ip4Rzj6pYhVwGBRuTUdNs2W3gVqP9NdgxW+xpOu89P2LljWxO9s9okPF07Tg5emWPcE81DUDNm/69F0IIEZi7onZ9G8FF8dkuedKQD9fZFmUICyGcjNi7veFhqLXJk1Zh9+XV5fQyJoLxw2p8p7it2ttD86X5XSKwnM1M+9JUUBnJLyKWFP1TjAGj4UhZk7zKHGhC/q5aEciwWPv6IOVIxk8KLhAncAar/KvX0IcdrGyA6od2tz59hyme01Lvv2EHQYbBG0Vckwpbh20KpN7nrOpH2R4UYU+ZhTiNsKwfqMwuLO12i6XZDYB7LZxGCjg1wBJ; bm_sv=E6EED08BCCE2D61F6E8B2A08E053B64A~YAAQvSdzaPMzACWBAQAAdQxKTRABlJgIRCOoI/AqWvMeXhoduk+X48uywBk8ekdxEnEH8P7q6dQ4ecptJgTDEwykt+VH2/K1de1TO4VfLBel0ACJYfCtB/9AutF11JpLVS4i8CbwkdY40Yhuci/YOmNJGtRJGYW94WY3pTgQbwIWQz+y1ad+UHxd5cS8Re8iNslVpAJBzgqdgDOTlPI/LRxiFn0HNT80SYqgaoCjcCyhhFc9EatUsnAyJVxHLqeMuGw=~1; NSE-TEST-1=1944068106.16415.0000");
+  // xhr.setRequestHeader("Cookie", "ak_bmsc=4293479B9F0FAB27E20A2EB97A6E1D02~000000000000000000000000000000~YAAQhCdzaOCnDTmBAQAATwJITRDyC56j6j0kTfSSWwePCO7Xi+fT01/2ip4Rzj6pYhVwGBRuTUdNs2W3gVqP9NdgxW+xpOu89P2LljWxO9s9okPF07Tg5emWPcE81DUDNm/69F0IIEZi7onZ9G8FF8dkuedKQD9fZFmUICyGcjNi7veFhqLXJk1Zh9+XV5fQyJoLxw2p8p7it2ttD86X5XSKwnM1M+9JUUBnJLyKWFP1TjAGj4UhZk7zKHGhC/q5aEciwWPv6IOVIxk8KLhAncAar/KvX0IcdrGyA6od2tz59hyme01Lvv2EHQYbBG0Vckwpbh20KpN7nrOpH2R4UYU+ZhTiNsKwfqMwuLO12i6XZDYB7LZxGCjg1wBJ; bm_sv=E6EED08BCCE2D61F6E8B2A08E053B64A~YAAQvSdzaPMzACWBAQAAdQxKTRABlJgIRCOoI/AqWvMeXhoduk+X48uywBk8ekdxEnEH8P7q6dQ4ecptJgTDEwykt+VH2/K1de1TO4VfLBel0ACJYfCtB/9AutF11JpLVS4i8CbwkdY40Yhuci/YOmNJGtRJGYW94WY3pTgQbwIWQz+y1ad+UHxd5cS8Re8iNslVpAJBzgqdgDOTlPI/LRxiFn0HNT80SYqgaoCjcCyhhFc9EatUsnAyJVxHLqeMuGw=~1; NSE-TEST-1=1944068106.16415.0000");
 
 
 
-  xhr.send();
+  // xhr.send();
   function getData() {
 
 
