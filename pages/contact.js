@@ -1,94 +1,94 @@
 import Head from 'next/head'
 import React, { useEffect, useState } from "react"
-import axios from "axios";
+// import axios from "axios";
 function About() {
-  const [amount, setAmount] = useState("");
-  const [inflation, setInfla] = useState("");
-  const [returns, setReturns] = useState("");
-  const [period, setPeriod] = useState("");
+  // const [amount, setAmount] = useState("");
+  // const [inflation, setInfla] = useState("");
+  // const [returns, setReturns] = useState("");
+  // const [period, setPeriod] = useState("");
 
-  var sipAmt = 0;
+  // var sipAmt = 0;
 
-  // WARNING: For GET requests, body is set to null by browsers.
-
-
-  var XMLHttpRequest = require('xhr2');
-  var xhr = new XMLHttpRequest();
-
-  xhr.withCredentials = true;
+  // // WARNING: For GET requests, body is set to null by browsers.
 
 
+  // var XMLHttpRequest = require('xhr2');
+  // var xhr = new XMLHttpRequest();
 
-  xhr.addEventListener("readystatechange", function () {
-
-    if (this.readyState === 4) {
-
-      console.log(this.responseText);
-
-    }
-
-  });
+  // xhr.withCredentials = true;
 
 
 
-  // xhr.open("GET", "https://www1.nseindia.com/nseapi/index-movers");
+  // xhr.addEventListener("readystatechange", function () {
 
-  // xhr.setRequestHeader("Authorization", "Basic aWlzbFVzZXI6aWlzbEAxMjM=");
+  //   if (this.readyState === 4) {
 
-  // // client.Headers.Add("Authorization", strUIDPWD);
-  // xhr.setRequestHeader("user-agent", "PostmanRuntime / 7.23.0");
-  // xhr.setRequestHeader("Accept", "*/*");
+  //     console.log(this.responseText);
 
-  // // WARNING: Cookies will be stripped away by the browser before sending the request.
+  //   }
 
-  // xhr.setRequestHeader("Cookie", "ak_bmsc=4293479B9F0FAB27E20A2EB97A6E1D02~000000000000000000000000000000~YAAQhCdzaOCnDTmBAQAATwJITRDyC56j6j0kTfSSWwePCO7Xi+fT01/2ip4Rzj6pYhVwGBRuTUdNs2W3gVqP9NdgxW+xpOu89P2LljWxO9s9okPF07Tg5emWPcE81DUDNm/69F0IIEZi7onZ9G8FF8dkuedKQD9fZFmUICyGcjNi7veFhqLXJk1Zh9+XV5fQyJoLxw2p8p7it2ttD86X5XSKwnM1M+9JUUBnJLyKWFP1TjAGj4UhZk7zKHGhC/q5aEciwWPv6IOVIxk8KLhAncAar/KvX0IcdrGyA6od2tz59hyme01Lvv2EHQYbBG0Vckwpbh20KpN7nrOpH2R4UYU+ZhTiNsKwfqMwuLO12i6XZDYB7LZxGCjg1wBJ; bm_sv=E6EED08BCCE2D61F6E8B2A08E053B64A~YAAQvSdzaPMzACWBAQAAdQxKTRABlJgIRCOoI/AqWvMeXhoduk+X48uywBk8ekdxEnEH8P7q6dQ4ecptJgTDEwykt+VH2/K1de1TO4VfLBel0ACJYfCtB/9AutF11JpLVS4i8CbwkdY40Yhuci/YOmNJGtRJGYW94WY3pTgQbwIWQz+y1ad+UHxd5cS8Re8iNslVpAJBzgqdgDOTlPI/LRxiFn0HNT80SYqgaoCjcCyhhFc9EatUsnAyJVxHLqeMuGw=~1; NSE-TEST-1=1944068106.16415.0000");
+  // });
 
 
 
-  // xhr.send();
-  function getData() {
+  // // xhr.open("GET", "https://www1.nseindia.com/nseapi/index-movers");
+
+  // // xhr.setRequestHeader("Authorization", "Basic aWlzbFVzZXI6aWlzbEAxMjM=");
+
+  // // // client.Headers.Add("Authorization", strUIDPWD);
+  // // xhr.setRequestHeader("user-agent", "PostmanRuntime / 7.23.0");
+  // // xhr.setRequestHeader("Accept", "*/*");
+
+  // // // WARNING: Cookies will be stripped away by the browser before sending the request.
+
+  // // xhr.setRequestHeader("Cookie", "ak_bmsc=4293479B9F0FAB27E20A2EB97A6E1D02~000000000000000000000000000000~YAAQhCdzaOCnDTmBAQAATwJITRDyC56j6j0kTfSSWwePCO7Xi+fT01/2ip4Rzj6pYhVwGBRuTUdNs2W3gVqP9NdgxW+xpOu89P2LljWxO9s9okPF07Tg5emWPcE81DUDNm/69F0IIEZi7onZ9G8FF8dkuedKQD9fZFmUICyGcjNi7veFhqLXJk1Zh9+XV5fQyJoLxw2p8p7it2ttD86X5XSKwnM1M+9JUUBnJLyKWFP1TjAGj4UhZk7zKHGhC/q5aEciwWPv6IOVIxk8KLhAncAar/KvX0IcdrGyA6od2tz59hyme01Lvv2EHQYbBG0Vckwpbh20KpN7nrOpH2R4UYU+ZhTiNsKwfqMwuLO12i6XZDYB7LZxGCjg1wBJ; bm_sv=E6EED08BCCE2D61F6E8B2A08E053B64A~YAAQvSdzaPMzACWBAQAAdQxKTRABlJgIRCOoI/AqWvMeXhoduk+X48uywBk8ekdxEnEH8P7q6dQ4ecptJgTDEwykt+VH2/K1de1TO4VfLBel0ACJYfCtB/9AutF11JpLVS4i8CbwkdY40Yhuci/YOmNJGtRJGYW94WY3pTgQbwIWQz+y1ad+UHxd5cS8Re8iNslVpAJBzgqdgDOTlPI/LRxiFn0HNT80SYqgaoCjcCyhhFc9EatUsnAyJVxHLqeMuGw=~1; NSE-TEST-1=1944068106.16415.0000");
+
+
+
+  // // xhr.send();
+  // function getData() {
 
 
 
 
-    console.log(amount, inflation, returns, period);
-    // let data = { amount, inflation, returns, period };
-    document.getElementById("results").style.display = 'none';
-    // fetch('https://mfapi.advisorkhoj.com/calc/getTargetAmountSIPCalcResult?wealth_amount=514991&inflation_rate=5&expected_return=12&period=30&key=5cc89622-8125-41f6-8b73-ccac27455c26',{
-    //   method: 'POST',
-    //   // body: JSON.stringify(data)
-    // }).then((res)=>{
-    //   console.log(res.statusText);
-    //   // console.log( JSON.stringify(res))
-    // })
+  //   console.log(amount, inflation, returns, period);
+  //   // let data = { amount, inflation, returns, period };
+  //   document.getElementById("results").style.display = 'none';
+  //   // fetch('https://mfapi.advisorkhoj.com/calc/getTargetAmountSIPCalcResult?wealth_amount=514991&inflation_rate=5&expected_return=12&period=30&key=5cc89622-8125-41f6-8b73-ccac27455c26',{
+  //   //   method: 'POST',
+  //   //   // body: JSON.stringify(data)
+  //   // }).then((res)=>{
+  //   //   console.log(res.statusText);
+  //   //   // console.log( JSON.stringify(res))
+  //   // })
 
-    axios({
+  //   axios({
 
-      // Endpoint to send files
-      url: "https://mfapi.advisorkhoj.com/calc/getTargetAmountSIPCalcResult?wealth_amount=" + amount + "&inflation_rate=5&expected_return=12&period=30&key=5cc89622-8125-41f6-8b73-ccac27455c26",
-      method: "POST",
-
-
-      // Attaching the form data
-      // data: formData,
-    })
-
-      // Handle the response from backend here
-      .then((res) => {
-        // this.setState({
-        //   post: res.data.sip_amount
-        // })
-        // console.log(res.data.sip_amount);
-        document.getElementById("results").style.display = 'block';
-        sipAmt = res.data.sip_amount;
-        console.log(sipAmt);
-        document.getElementById("sipAmt").innerHTML = sipAmt;
-
-      })
+  //     // Endpoint to send files
+  //     url: "https://mfapi.advisorkhoj.com/calc/getTargetAmountSIPCalcResult?wealth_amount=" + amount + "&inflation_rate=5&expected_return=12&period=30&key=5cc89622-8125-41f6-8b73-ccac27455c26",
+  //     method: "POST",
 
 
-      // Catch errors if any
-      .catch((err) => { });
+  //     // Attaching the form data
+  //     // data: formData,
+  //   })
+
+  //     // Handle the response from backend here
+  //     .then((res) => {
+  //       // this.setState({
+  //       //   post: res.data.sip_amount
+  //       // })
+  //       // console.log(res.data.sip_amount);
+  //       document.getElementById("results").style.display = 'block';
+  //       sipAmt = res.data.sip_amount;
+  //       console.log(sipAmt);
+  //       document.getElementById("sipAmt").innerHTML = sipAmt;
+
+  //     })
+
+
+  //     // Catch errors if any
+  //     .catch((err) => { });
 
 
 
